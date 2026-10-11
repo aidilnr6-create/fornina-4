@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untuk Nina 💛</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div id="bg-floaties"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">    
+    <div class="hero-content">
+      <p class="hero-sub">sebuah pesan kecil untuk</p>
+      <h1 class="hero-title">Nina</h1>
+      <p class="hero-desc">
+        Tarik napas dulu ya...<br>
+        ada sesuatu yang aku titipin buat kamu 🤍
+      </p>
+      <button id="startBtn" class="btn-primary">
+        ✨ Klik di sini ✨
+      </button>
+      <p class="hero-hint">(nyalain lagunya dulu, biar makin hangat)</p>
+    </div>
+    <div class="scroll-hint">↓</div>
+  </section>
+
+  <!-- ===== SAPAAN ===== -->
+  <section class="section reveal">
+    <div class="card">
+      <h2>Hai Nina 🌷</h2>
+      <p>
+        Aku tau hari ini berat banget buat kamu.<br>
+        Kepala kamu pusing, badan capek, dan rasanya ngantuk teruss.
+      </p>
+      <p>
+        Tapi kamu masih di sini.<br>
+        Kamu masih bertahan.<br>
+        Dan itu <em>hebat banget</em>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== PESAN UTAMA ===== -->
+  <section class="section reveal">
+    <div class="card card-highlight">
+      <h2>Buat kamu, dari aku 💌</h2>
+      <p class="big">
+        Good job, Nina. Buat hari ini, kamu sudah melewatinya dengan sangat baik.
+      </p>
+      <p>
+        So proud of you. Beneran.
+      </p>
+      <p>
+        Sekarang kamu istirahat yaaa...<br>
+        Makan yang banyak. Roti yang aku kasih juga dimakan okeee? 🥐
+      </p>
+      <p>
+        Semoga kamu happy sama apa yang aku kasih.
+      </p>
+      <p class="signature">Lovee uuu, Ninaaa 💛</p>
+    </div>
+  </section>
+
+  <!-- ===== KATA SEMANGAT RANDOM ===== -->
+  <section class="section reveal">
+    <div class="card card-center">
+      <h2>Butuh semangat?</h2>
+      <p id="boostText" class="boost-text">
+        Klik tombol di bawah ya, aku punya banyak kata buat kamu ✨
+      </p>
+      <button id="boostBtn" class="btn-primary">
+        Kasih aku semangat ✨
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== PELUK VIRTUAL ===== -->
+  <section class="section reveal">
+    <div class="card card-center">
+      <h2>Mau peluk? 🤗</h2>
+      <p>Aku ngga bisa di samping kamu sekarang,<br>tapi aku titipin peluk lewat sini ya.</p>
+      <button id="hugBtn" class="btn-primary btn-hug">
+        🤗 Peluk Nina
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING ===== -->
+  <section class="section section-closing reveal">
+    <div class="card card-center">
+      <h2>Selamat istirahat, sayang 🌙</h2>
+      <p>
+        Besok hari baru. Kamu ngga harus kuat terus.<br>
+        Kalau capek, istirahat. Kalau sedih, nangis. Kalau butuh aku, aku ada.
+      </p>
+      <p class="signature">— dari aku, yang selalu ada buat kamu 💛</p>
+    </div>
+  </section>
+
+  <!-- Musik (hidden) -->
+  <audio id="bgm" loop>
+    <source src="lagu.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Kontainer hati buat peluk virtual -->
+  <div id="hugContainer"></div>
+
+  <!-- Tombol toggle musik pojok kanan bawah -->
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle musik">🔇</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+/* =========================================
+   WEB UNTUK NINA 💛
+   Full style.css — v2 (anti-belang + floating hearts)
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #FFF8F0;
+  --bg-soft: #FDEEE6;
+  --peach: #F5B7A6;
+  --pink: #E8A0A0;
+  --lavender: #C9B6E4;
+  --text: #6B4F4F;
+  --text-soft: #9B7B7B;
+  --white: #FFFFFF;
+  --shadow: 0 8px 24px rgba(107, 79, 79, 0.08);
+}
+
+/* ===== BACKGROUND UTAMA (ANTI-BELANG) ===== */
+html {
+  background: linear-gradient(
+    180deg,
+    #FDEEE6 0%,
+    #FFF8F0 20%,
+    #FFF8F0 80%,
+    #FDEEE6 100%
+  );
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: transparent;
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* ===== FLOATING EMOJI GLOBAL (di belakang konten) ===== */
+#bg-floaties {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-float-heart {
+  position: absolute;
+  bottom: -60px;
+  font-size: 1.5rem;
+  animation: riseUpBg 10s linear infinite;
+  opacity: 0.7;
+  will-change: transform, opacity;
+}
+
+@keyframes riseUpBg {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-115vh) scale(1.4) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 500px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-sub {
+  color: var(--text-soft);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 12vw, 5rem);
+  color: var(--pink);
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.hero-hint {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  font-style: italic;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 2rem;
+  color: var(--peach);
+  animation: bounce 2s infinite;
+  z-index: 2;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  background: linear-gradient(135deg, var(--peach), var(--pink));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(232, 160, 160, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(232, 160, 160, 0.55);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  color: var(--pink);
+  text-align: center;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  max-width: 560px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(245, 183, 166, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--pink);
+}
+
+.card p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card-highlight {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF4EE 100%);
+  border: 1px solid rgba(232, 160, 160, 0.25);
+}
+
+.card-center {
+  text-align: center;
+}
+
+.big {
+  font-size: 1.2rem !important;
+  font-weight: 700;
+  color: var(--pink) !important;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.signature {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: var(--pink) !important;
+  font-size: 1.15rem !important;
+  margin-top: 1.5rem !important;
+}
+
+/* ===== PHOTO GRID ===== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 560px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.photo {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.photo:hover {
+  transform: translateY(-5px) rotate(-1deg);
+}
+
+.photo img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-soft);
+}
+
+.photo figcaption {
+  padding: 1rem 1.2rem;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  font-style: italic;
+  text-align: center;
+}
+
+/* ===== BOOST (Kata semangat) ===== */
+.boost-text {
+  font-size: 1.15rem !important;
+  min-height: 3.5rem;
+  color: var(--text) !important;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  transition: opacity 0.3s;
+  margin: 1.5rem 0 !important;
+}
+
+.boost-text.fade {
+  opacity: 0;
+}
+
+/* ===== HUG ===== */
+.btn-hug {
+  margin-top: 1rem;
+}
+
+#hugContainer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.hug-heart {
+  position: absolute;
+  font-size: 2rem;
+  animation: riseUp 3s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes riseUp {
+  0% {
+    transform: translateY(0) scale(1) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.6) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+/* ===== CLOSING ===== */
+.section-closing {
+  background: transparent;
+  padding-bottom: 6rem;
+}
+
+/* ===== MUSIC TOGGLE ===== */
+.music-toggle {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  box-shadow: 0 4px 14px rgba(107, 79, 79, 0.15);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s;
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* ===== FADE IN BODY ===== */
+body.loaded {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
